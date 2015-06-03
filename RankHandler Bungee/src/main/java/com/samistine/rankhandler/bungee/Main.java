@@ -24,8 +24,6 @@ public class Main extends Plugin implements Listener {
         getLogger().info("Enabled RankHandler-BungeeCord");
         getProxy().registerChannel("RankHandler_SendRank");
         getProxy().getPluginManager().registerListener(this, this);
-        Sam sam = new Sam();
-        sam.start();
         main = this;
     }
 
@@ -76,25 +74,5 @@ public class Main extends Plugin implements Listener {
      */
     public String[] getRanksByUUID(UUID uuid) {
         return getRanksCopy(uuid);
-    }
-
-    private class Sam extends Thread {
-
-        @Override
-        public void run() {
-            while (true) {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                System.out.println("BEGIN HASHMAP");
-                for (String rank[] : ranks.values()) {
-                    System.out.println(Arrays.toString(rank));
-                }
-                System.out.println("END HASHMAP");
-            }
-        }
-
     }
 }
