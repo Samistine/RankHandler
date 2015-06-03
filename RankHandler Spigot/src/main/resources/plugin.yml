@@ -1,0 +1,6 @@
+name: RankHandler-Bukkit
+main : com.samistine.rankhandler.bukkit.Main
+version: 1
+description: Sync rank data to BungeeCord
+author: Samistine
+depend: [Vault]

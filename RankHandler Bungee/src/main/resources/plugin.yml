@@ -1,0 +1,4 @@
+name: RankHandler-Bungee
+main : com.samistine.rankhandler.bungee.Main
+version: 1
+author: Samistine
